@@ -23,25 +23,63 @@ Descarga Android studio [aquí](https://developer.android.com/studio?hl=es-419).
 
 #### 2.1.2 Abrir powershell como administrador
 
-#### 2.1.3 Descargar e instalar chocolatey
+#### 2.1.3 Instalar flutter dart-sdk
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+git clone https://github.com/flutter/flutter.git -b stable C:\src\flutter
 ```
 
-#### 2.1.4 Instalar dart-sdk
+#### 2.1.4 Agregar variable de Entorno
 
 ```powershell
-choco install dart-sdk -y
+setx PATH "C:\src\flutter\bin;$env:PATH" /M
 ```
 
-#### 2.1.5 Instalar dependencias
+#### 2.1.5 Verificar instalación
 
-Desde la carpeta raíz del proyecto, ejecutar: 
+```powershell
+flutter --version
+```
+
+```powershell
+flutter doctor -v
+```
+
+#### 2.1.6 Instalar dependencias
+
+Desde la carpeta raíz del proyecto, ejecutar:
 
 ```powershell
 flutter pub get
 ```
+
+#### 2.1.7 Configurar dart-sdk
+
+Seleccionar alerta en parte superior derecha de configurar SDK, colocar ruta en:
+
+```powershell
+C:\src\flutter\bin\cache\dart-sdk
+```
+
+#### 2.1.8 Verficar dispositivos
+
+```powershell
+flutter devices
+```
+
+#### 2.1.9 Ejecución en modo debug
+
+```powershell
+flutter run
+```
+
+#### 2.1.10 Para bajo consumo de recursos, usar chrome
+
+```powershell
+flutter run -d web-server
+```
+
+url:  http://localhost:37757/
 
 ## 3. Arquitectura Base de Datos 
 

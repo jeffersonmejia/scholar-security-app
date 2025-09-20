@@ -74,20 +74,29 @@ class GpsBloc extends Bloc<GpsEvent, GpsState> {
     try {
       final status = await Permission.location.request();
       switch (status) {
-        //Cuando se acepta el permiso
+      // Cuando se acepta el permiso
         case PermissionStatus.granted:
           add(GpsPermissionGranted(
               isGpsPermissionGranted: true, isGpsEnabled: state.isGpsEnabled));
           break;
-        //Cuando se deniega el permiso
+
+      // Cuando se deniega el permiso
         case PermissionStatus.denied:
         case PermissionStatus.permanentlyDenied:
         case PermissionStatus.restricted:
         case PermissionStatus.limited:
+        case PermissionStatus.provisional: // <- agregado provisional
           add(GpsPermissionGranted(
               isGpsPermissionGranted: false, isGpsEnabled: state.isGpsEnabled));
           openAppSettings();
           break;
+
+      // Alternativa: si quieres cubrir cualquier otro caso inesperado
+      // default:
+      //   add(GpsPermissionGranted(
+      //       isGpsPermissionGranted: false, isGpsEnabled: state.isGpsEnabled));
+      //   openAppSettings();
+      //   break;
       }
     } catch (e) {
       if (kDebugMode) {
@@ -95,6 +104,7 @@ class GpsBloc extends Bloc<GpsEvent, GpsState> {
       }
     }
   }
+
 
   //limpiar el stream - siempre es muy buena practica
   @override
