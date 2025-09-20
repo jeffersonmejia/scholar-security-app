@@ -34,6 +34,15 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```powershell
 choco install dart-sdk -y
 ```
+
+#### 2.1.5 Instalar dependencias
+
+Desde la carpeta raíz del proyecto, ejecutar: 
+
+```powershell
+flutter pub get
+```
+
 ## 3. Arquitectura Base de Datos 
 
 Pendiente.
