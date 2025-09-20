@@ -79,7 +79,29 @@ flutter run
 flutter run -d web-server
 ```
 
-url:  http://localhost:37757/
+#### 2.1.10 Generar App android APK en caso de requerirlo
+
+```powershell
+flutter build apk --release
+```
+
+ruta disponible en:
+
+```powershell
+build/app/outputs/flutter-apk/app-release.apk
+```
+
+#### 2.1.11 Generar App iOS en caso de requerirlo
+
+```powershell
+flutter build ios --release
+```
+
+ruta disponible en:
+
+```powershell
+build/ios/iphoneos/Runner.app
+```
 
 ## 3. Arquitectura Base de Datos 
 
@@ -87,7 +109,7 @@ Pendiente.
 
 ## 4. Instalación
 
-Pendiente autorización para subir Google Play Store.
+Pendiente autorización para subir Google Play Store Y App Store.
 
 ## 5. Enlaces de ayuda
 
