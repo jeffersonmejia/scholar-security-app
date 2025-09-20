@@ -97,13 +97,13 @@ Pendiente autorización para subir Google Play Store.
 
 ### 5.1 Periodo 202551
 
-| No | Responsable       | Rol                             |
-|----|-------------------|---------------------------------|
-| 1  | Edwin Camino      | Director de proyecto            |
-| 2  | Paulo Galarza     | Desarrollador Frontend, Backend |
-| 3  | Jefferson Mejía   | Desarrollador Front, Backend    |
-| 4  | Andrés Ushiña     | Documentación                   |
-| 5  | Shadia Reyes      | Gestión de Moodle               |
+| No | Responsable      | Rol                             |
+|----|------------------|---------------------------------|
+| 1  | Edwin Camino     | Director de proyecto            |
+| 2  | Paulo Galarza    | Desarrollador Frontend, Backend |
+| 3  | Jefferson Mejía  | Desarrollador Front, Backend    |
+| 4  | Andrés Ushiña    | Documentación                   |
+| 5  | Shadia Reyes     | Gestión de Moodle               |
 | 6  | Dayanara Bautista | Diseño                          |
 
 ### 5.2 Periodo 202550
